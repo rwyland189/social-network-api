@@ -17,4 +17,10 @@ const UserSchema = new Schema({
     },
     thoughts: [],
     friends: []
-})
+});
+
+// create User model using UserSchema
+const User = model('User', UserSchema);
+
+// export User model
+module.exports = User;
