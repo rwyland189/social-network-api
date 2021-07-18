@@ -12,7 +12,7 @@ const UserSchema = new Schema({
     email: {
         type: String,
         unique: true,
-        required: 'Password is required!',
+        required: 'Email is required!',
         // valid email address - mongoose matching validation
     },
     thoughts: [],
