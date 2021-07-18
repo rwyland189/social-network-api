@@ -15,8 +15,18 @@ const UserSchema = new Schema({
         required: 'Email is required!',
         // valid email address - mongoose matching validation
     },
-    thoughts: [],
+    thoughts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Thought'
+        }
+    ],
     friends: []
+});
+
+// get total count of thoughts on retrieval
+UserSchema.virtual('thoughtCount').get(function() {
+    return this.thoughts.length;
 });
 
 // create User model using UserSchema
