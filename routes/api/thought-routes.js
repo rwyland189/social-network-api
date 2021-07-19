@@ -19,9 +19,5 @@ router
     .get(getThoughtById)
     .put(updateThought)
     .delete(removeThought);
-    
-
-// /api/thoughts/<userId>/<thoughtId>
-router.route('/:userId/:thoughtId').
 
 module.exports = router;
