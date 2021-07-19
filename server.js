@@ -2,7 +2,7 @@
 const express = require('express');
 
 // require routes
-// const { routes } = require('./routes/api');
+const routes = require('./routes');
 
 const PORT = process.env.PORT || 3001;
 
@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 // parse incoming json data
 app.use(express.json());
 
-// app.use(routes);
+app.use(routes);
 
 // connect mongoose when starting the app
 const mongoose = require('mongoose');
